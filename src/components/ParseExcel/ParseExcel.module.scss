@@ -1,0 +1,54 @@
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .inputs {
+    display: flex;
+    flex-direction: column;
+
+    .wrapperInput {
+      position: relative;
+      min-width: 400px;
+      height: 30px;
+      border: 2px solid black;
+      border-radius: 6px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .inputUpload {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        // visibility: hidden;
+        z-index: 100;
+        min-width: 400px;
+        height: 30px;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+    }
+
+    .inputSearch {
+      margin-top: 20px;
+      outline: none;
+      border: 1px solid black;
+      padding: 5px 10px;
+      border-radius: 6px;
+    }
+
+    .inputError {
+      border: 1px solid red;
+    }
+  }
+
+  .result {
+    font-size: 20px;
+  }
+}
