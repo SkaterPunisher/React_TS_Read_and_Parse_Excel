@@ -16,6 +16,7 @@ export const useParseExcel = () => {
   const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
       setFileName(e.target.files[0].name);
+      
       const data = await e.target.files[0].arrayBuffer();
       const workbook = read(data);
 
@@ -23,6 +24,7 @@ export const useParseExcel = () => {
       const jsonDate = utils.sheet_to_json<DataSheets>(worksheet);
 
       setData(jsonDate);
+
     }
   };
 
